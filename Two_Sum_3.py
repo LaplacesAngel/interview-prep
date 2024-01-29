@@ -18,4 +18,4 @@ def twoSum(nums, target):
 
 
 
-print(twoSum([2, 3, 1], 3))
+print(twoSum([1, 2, 3], 4))
