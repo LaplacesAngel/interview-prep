@@ -22,7 +22,6 @@ class Solution(object):
 
 
 
-        prac
 
 
 
