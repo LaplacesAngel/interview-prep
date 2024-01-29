@@ -18,6 +18,4 @@ def twoSum(nums, target):
 
 
 
-
-
 print(twoSum([2, 3, 1], 3))
