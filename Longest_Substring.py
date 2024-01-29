@@ -30,9 +30,12 @@ def findLengthLongestSubString(string):
     for i in range(0, len(string)):
         
         if string[i] in seen:
-            return len(string)
+            return len(seen)
         
         else:
             seen[string[i]] = i
+            print(seen)
 
 print(findLengthLongestSubString("abcabcbb"))
+
+#works for a few test cases, if the repeatint substring is at the beginning, need to refactor
