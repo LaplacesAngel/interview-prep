@@ -31,14 +31,14 @@ class Solution:
         total = 0
         counts = {}
 
-        for i, num in enumerate(nums):
-            prev = counts.get(num, 0)
+        for i in range(0, len(nums)):
+            prev = counts.get(nums[i], 0)
             print(f"counts is {counts} at the beginning of turn {i}")
-            print(f"Num is {num} and counts.get({num}) is {prev} on turn {i}")
+            print(f"nums[{i}] is {nums[i]} and counts.get({nums[i]}) is {prev} on turn {i}")
             total = total + prev
-            print(f"Total is {total} on turn {i}")
-            counts[num] = prev + 1
-            print(f"counts is {counts} at the end of turn {i}")
+            print(f"Total is {total} during turn {i}")
+            counts[nums[i]] = prev + 1
+            print(f"counts is {counts} at the end of turn {i} \n\n")
 
         return total
 
@@ -47,6 +47,6 @@ class Solution:
 nums = [1,2,3,1,1,3]
 
 s1 = Solution()
-print(f"Nested loop solution: {s1.numIdenticalPairs(nums)}")
+print(f"\nNested loop solution: {s1.numIdenticalPairs(nums)} \n")
 print(f"Dictionary solution: {s1.numIdenticalPairsDict(nums)}")
 
