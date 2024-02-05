@@ -28,19 +28,19 @@ class Solution:
     #with a dict:
     def numIdenticalPairsDict(self, nums):
 
-        dict = {}
-        goodpairs = []
+        total = 0
+        counts = {}
 
         for i, num in enumerate(nums):
-            print(num, dict)
-            if num in dict and i < dict[num]:
-                print(num, dict[num])
-                goodpair = (i, dict[num])
-                goodpairs.append(goodpair)
+            prev = counts.get(num, 0)
+            print(f"counts is {counts} at the beginning of turn {i}")
+            print(f"Num is {num} and counts.get({num}) is {prev} on turn {i}")
+            total = total + prev
+            print(f"Total is {total} on turn {i}")
+            counts[num] = prev + 1
+            print(f"counts is {counts} at the end of turn {i}")
 
-            dict[num] = i
-
-        return goodpairs
+        return total
 
 
 
